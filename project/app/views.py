@@ -17,6 +17,7 @@ def register(request):
         return response
     return render(request,'register.html')
 
+
 def login(request):
     print(request.POST)
     if request.method=='POST':
@@ -33,10 +34,11 @@ def login(request):
                 }
         return render(request,'get.html',data)
     return render(request,'login.html')
+
     
 
 def delete(request):
-    data=render(request,'delete.html')
+    data=render(request,'home.html')
     data.delete_cookie('fname')
     data.delete_cookie('lname')
     data.delete_cookie('email')
